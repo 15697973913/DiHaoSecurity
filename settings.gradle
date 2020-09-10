@@ -1,1 +1,1 @@
-include ':demo', ':arms',  ':arms-imageloader-glide'
+include ':app', ':arms',  ':arms-imageloader-glide'

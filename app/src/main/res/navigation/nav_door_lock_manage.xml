@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_door_lock_manage"
+    app:startDestination="@id/doorLockDetailFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/doorLockDetailFragment"
+        android:name="com.fengdi.baseproject.mvp.ui.fragment.home.DoorLockDetailFragment"
+        android:label="DoorLockDetailFragment"
+        tools:layout="@layout/fragment_door_lock_detail"
+        />
+</navigation>

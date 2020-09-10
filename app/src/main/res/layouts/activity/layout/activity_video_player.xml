@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:title="家门口" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:scaleType="fitXY"
+        android:src="@mipmap/bg_login_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_15"
+            android:src="@mipmap/ic_silence" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="高清"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_17" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_16"
+            android:src="@mipmap/ic_full_screen" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_53"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_12"
+            android:src="@mipmap/ic_change_direction" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_15"
+            android:src="@mipmap/ic_screenshot" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_12"
+            android:src="@mipmap/ic_sound_recording" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_17"
+            android:paddingBottom="@dimen/dp_17"
+            android:src="@mipmap/ic_videotape" />
+
+    </LinearLayout>
+
+    <View style="@style/dividingLine_Horizontal" />
+
+    <RadioGroup
+        android:id="@+id/gbDeviceType"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbSmartLock"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_15"
+            android:text="@string/str_cloud_video"
+            android:textColor="@color/check_blue_or_gray"
+            android:textSize="@dimen/sp_20" />
+
+        <RadioButton
+            android:id="@+id/rbMonitor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_20"
+            android:text="@string/str_local_video"
+            android:textColor="@color/check_blue_or_gray"
+            android:textSize="@dimen/sp_20" />
+    </RadioGroup>
+
+
+    <View style="@style/dividingLine_Horizontal" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="74dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_nodata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/str_nodata"
+            android:textColor="@color/c_B2B8C8"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_25"
+                android:layout_weight="1"
+                android:text="@string/str_today_video"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:gravity="center"
+                android:text="@string/str_view_more"
+                android:textColor="@color/c_333333"
+                android:textSize="@dimen/sp_17"
+                app:drawableEndCompat="@drawable/ic_arrow_right_small" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcyVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -64,6 +64,7 @@ ext {
             "vlayout"                  : "com.alibaba.android:vlayout:1.1.0@aar",
             "autosize"                 : "me.jessyan:autosize:1.2.1",
             "qmui"                     : "com.qmuiteam:qmui:2.0.0-alpha10",
+            "qmuiarch"                     : "com.qmuiteam:arch:2.0.0-alpha10",
             "pictureselector"          : "com.github.LuckSiege.PictureSelector:picture_library:v2.5.8",
             //Banner图
             "banner"                            : 'cn.bingoogolapple:bga-banner:2.2.4@aar',

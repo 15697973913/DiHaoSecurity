@@ -59,6 +59,19 @@ public class ArmsDataHelper {
     }
 
     /**
+     * 存储重要信息到sharedPreferences；
+     *
+     * @param key
+     * @param value
+     */
+    public static void setBooleanSF(Context context, String key, Boolean value) {
+        if (mSharedPreferences == null) {
+            mSharedPreferences = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
+        }
+        mSharedPreferences.edit().putBoolean(key, value).apply();
+    }
+
+    /**
      * 返回存在sharedPreferences的信息
      *
      * @param key

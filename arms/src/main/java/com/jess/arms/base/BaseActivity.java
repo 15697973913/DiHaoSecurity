@@ -28,12 +28,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.jess.arms.R;
 import com.jess.arms.base.delegate.IActivity;
 import com.jess.arms.integration.cache.Cache;
 import com.jess.arms.integration.cache.CacheType;
 import com.jess.arms.integration.lifecycle.ActivityLifecycleable;
 import com.jess.arms.mvp.IPresenter;
 import com.jess.arms.utils.ArmsUtils;
+import com.qmuiteam.qmui.util.QMUIStatusBarHelper;
 import com.trello.rxlifecycle2.android.ActivityEvent;
 
 import javax.inject.Inject;
@@ -108,6 +110,11 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
             e.printStackTrace();
         }
         initData(savedInstanceState);
+
+        //设置透明状态栏
+        QMUIStatusBarHelper.translucent(this);
+
+        QMUIStatusBarHelper.setStatusBarLightMode(this);
     }
 
     @Override
@@ -147,4 +154,11 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
     public boolean useFragment() {
         return true;
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_still, R.anim.slide_out_right);
+    }
 }
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_monitor_manage"
+    app:startDestination="@id/monitorDetailFragment">
+
+    <fragment
+        android:id="@+id/monitorDetailFragment"
+        android:name="com.fengdi.baseproject.mvp.ui.fragment.home.MonitorDetailFragment"
+        android:label="MonitorDetailFragment"
+        tools:layout="@layout/fragment_monitor_detail"
+        />
+</navigation>

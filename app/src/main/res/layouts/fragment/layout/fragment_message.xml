@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:title="消息" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/ic_unlock_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="@string/str_unlock_msg"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvUnlockMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="老妈使用密码打开了老家的家门"
+            android:textColor="@color/c_B2B8C8"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:text="10:20"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:background="@drawable/bg_msg_number"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:text="9"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/dp_87"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/bg_dividing" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivAlert"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/ic_alert_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tAlertMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="@string/str_alert_msg"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivAlert"
+            app:layout_constraintTop_toTopOf="@+id/ivAlert"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvAlertMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="输入3次错误密码"
+            android:textColor="@color/c_B2B8C8"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAlert"
+            app:layout_constraintStart_toEndOf="@+id/ivAlert"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:text="10:20"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAlertMsgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:background="@drawable/bg_msg_number"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:text="9"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/dp_87"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/bg_dividing" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivGuarantee"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/ic_guarantee_msg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="@string/str_guarantee_msg"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivGuarantee"
+            app:layout_constraintTop_toTopOf="@+id/ivGuarantee"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="门锁自检功能有异常，已上报"
+            android:textColor="@color/c_B2B8C8"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivGuarantee"
+            app:layout_constraintStart_toEndOf="@+id/ivGuarantee"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:text="10:20"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_13"
+            android:background="@drawable/bg_msg_number"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:text="9"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/dp_87"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/bg_dividing" />
+
+
+    <LinearLayout
+        android:id="@+id/linMyAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/ic_my_album"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_weight="1"
+            android:text="@string/str_myalbum"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivGuarantee"
+            app:layout_constraintTop_toTopOf="@+id/ivGuarantee"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tvMyAlbumNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:text="20"
+            android:textColor="@color/c_B2B8C8" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/dp_87"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/bg_dividing" />
+
+    <LinearLayout
+        android:id="@+id/linMyVideo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginStart="20dp"
+            android:src="@mipmap/ic_my_video"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_weight="1"
+            android:text="@string/str_myvideo"
+            android:textColor="@color/c_333333"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivGuarantee"
+            app:layout_constraintTop_toTopOf="@+id/ivGuarantee"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tvMyVideoNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:text="20"
+            android:textColor="@color/c_B2B8C8" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="@dimen/dp_87"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@color/bg_dividing" />
+
+</LinearLayout>

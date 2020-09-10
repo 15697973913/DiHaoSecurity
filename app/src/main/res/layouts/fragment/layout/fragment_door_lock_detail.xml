@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/c_f5f6f7"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:title="门锁详情" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_180"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivLockImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_85"
+            android:layout_marginStart="@dimen/dp_40"
+            android:src="@mipmap/ic_default_lock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/str_homedoor"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toEndOf="@+id/ivLockImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOnLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/str_off_line"
+            android:textColor="@color/select_blue_or_gray"
+            android:textSize="@dimen/sp_16"
+            app:drawableStartCompat="@drawable/select_circle_r5_gary_or_green"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:text="@string/str_close"
+            android:textColor="@color/select_red_or_green"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintStart_toEndOf="@+id/tvOnLine"
+            app:layout_constraintTop_toTopOf="@+id/tvOnLine"
+            app:layout_goneMarginStart="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/tvDeviceId"
+            style="@style/JgTextView_Vice1Color"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/str_deviceid_m_s"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvOnLine" />
+
+        <TextView
+            android:id="@+id/tvGroup"
+            style="@style/JgTextView_Vice1Color"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/tv_group_m_s"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeviceId" />
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            style="@style/JgTextView_Vice1Color"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/str_starttime_m_s"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
+
+        <TextView
+            android:id="@+id/tvWarrantyEndTime"
+            style="@style/JgTextView_Vice1Color"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/str_warranty_endtime_m_s"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="@+id/tvStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/tvStartTime" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View style="@style/dividingLine_Horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="@color/white"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tvUnlockAuthorize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_unlock_authorize"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_unlock_authorize" />
+
+        <TextView
+            android:id="@+id/tvRemoteUnlocking"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_remote_unlocking"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_remote_unlocking" />
+
+        <TextView
+            android:id="@+id/tvLiveVideo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_live_video"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_live_video" />
+
+        <TextView
+            android:id="@+id/tvHistory_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_history_video"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_history_video" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="@color/white"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/tvPasswordManage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_paasword_manage"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_paasword_manage" />
+
+        <TextView
+            android:id="@+id/tvAuthorizeManage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_authorize_manage"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_authorize_manage" />
+
+        <TextView
+            android:id="@+id/tvDeviceGrouping"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_device_grouping"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_device_grouping" />
+
+        <TextView
+            android:id="@+id/tvDoorLockSetting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_25"
+            android:text="@string/str_door_lock_setting"
+            android:textColor="@color/c_666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_door_lock_setting" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_margin="@dimen/dp_15"
+            android:text="开锁记录"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_20"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="本月"
+            android:textSize="@dimen/sp_14"
+            app:drawableEndCompat="@mipmap/ic_arrow_down" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_unlocking_record" />
+
+</LinearLayout>

@@ -25,6 +25,7 @@ import android.os.Message;
 import android.view.View;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.jess.arms.R;
 import com.jess.arms.base.delegate.AppLifecycles;
 import com.jess.arms.utils.ArmsUtils;
 
@@ -178,6 +179,10 @@ public final class AppManager {
             return;
         }
         getTopActivity().startActivity(intent);
+        //设置动画
+        getTopActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+
     }
 
     /**

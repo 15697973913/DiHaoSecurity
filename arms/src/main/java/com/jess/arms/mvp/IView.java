@@ -21,6 +21,9 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 
 import com.jess.arms.utils.ArmsUtils;
+import com.tbruyelle.rxpermissions2.RxPermissions;
+
+import org.jetbrains.annotations.Nullable;
 
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 

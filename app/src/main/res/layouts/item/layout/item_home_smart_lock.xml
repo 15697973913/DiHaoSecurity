@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><!--    qmui_general_shadow_elevation-->
+<com.qmuiteam.qmui.layout.QMUILinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_132"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/linCardView"
+    android:layout_marginStart="@dimen/dp_20"
+    android:layout_marginTop="@dimen/dp_5"
+    android:layout_marginEnd="@dimen/dp_20"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@color/qmui_config_color_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:qmui_borderColor="?attr/qmui_skin_support_color_separator"
+    app:qmui_outerNormalColor="?attr/qmui_skin_support_color_background"
+    app:qmui_shadowAlpha="0.3"
+    app:qmui_showBorderOnlyBeforeL="true">
+
+    <ImageView
+        android:id="@+id/ivLockImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_85"
+        android:layout_marginStart="@dimen/dp_25"
+        android:src="@mipmap/ic_default_lock" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLockName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家房门"
+            android:textColor="@color/c_B2B8C8"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvOnLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="@string/str_off_line"
+                android:textColor="@color/select_blue_or_gray"
+                android:textSize="@dimen/sp_16"
+                app:drawableStartCompat="@drawable/select_circle_r5_gary_or_green" />
+
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:text="@string/str_close"
+                android:textColor="@color/select_red_or_green"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAuthorizedUnlock"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_28"
+                android:background="@drawable/select_bg_r15_line_blue_or_gray"
+                android:gravity="center"
+                android:text="@string/str_authorized_unlock"
+                android:textColor="@color/select_blue_or_gray" />
+
+            <TextView
+                android:id="@+id/tvRemoteUnlock"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_28"
+                android:layout_marginStart="@dimen/dp_20"
+                android:background="@drawable/select_bg_r15_line_blue_or_gray"
+                android:gravity="center"
+                android:text="@string/str_remote_unlock"
+                android:textColor="@color/select_blue_or_gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+
+</com.qmuiteam.qmui.layout.QMUILinearLayout>
+
+
+
