@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightTextColor="@color/colorPrimary"
+        app:rightContent="保存"
+        app:title="添加分组"  />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/JgTextView_MainColor"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="分组名称"
+            android:textSize="@dimen/sp_16"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:hint="请输入分组名称"
+            android:background="@null"
+            android:textSize="@dimen/sp_16"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/JgTextView_MainColor"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="物业电话"
+            android:textSize="@dimen/sp_16"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:hint="请输入物业电话"
+            android:background="@null"
+            android:textSize="@dimen/sp_16"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

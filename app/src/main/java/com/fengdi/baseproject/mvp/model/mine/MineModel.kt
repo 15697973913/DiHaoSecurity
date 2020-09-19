@@ -15,12 +15,7 @@ import com.fengdi.baseproject.mvp.contract.mine.MineContract
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/07/2020 10:30
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/07/2020 10:30
  * ================================================
  */
 @FragmentScope

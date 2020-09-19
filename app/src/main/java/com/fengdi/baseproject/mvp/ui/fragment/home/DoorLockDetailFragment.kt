@@ -6,6 +6,7 @@ import android.os.Message
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
@@ -17,18 +18,21 @@ import com.fengdi.baseproject.mvp.contract.home.DoorLockDetailContract
 import com.fengdi.baseproject.mvp.presenter.home.DoorLockDetailPresenter
 
 import com.fengdi.baseproject.R
+import com.fengdi.baseproject.app.entity.UnLockRecoardBean
+import com.fengdi.baseproject.mvp.ui.activity.home.*
+import com.fengdi.baseproject.mvp.ui.adapter.RemoteUnLockAdapter
+import com.fengdi.baseproject.mvp.ui.adapter.UnLockRecordAdapter
+import kotlinx.android.synthetic.main.activity_un_lock_authorize.*
+import kotlinx.android.synthetic.main.fragment_door_lock_detail.*
 
 
 /**
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/09/2020 17:15
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/09/2020 17:15
+
+
  * ================================================
  */
 /**
@@ -44,16 +48,20 @@ import com.fengdi.baseproject.R
  * }
  * }
  */
-class DoorLockDetailFragment : BaseFragment<DoorLockDetailPresenter>() , DoorLockDetailContract.View{
+class DoorLockDetailFragment : BaseFragment<DoorLockDetailPresenter>(), DoorLockDetailContract.View {
     companion object {
-    fun newInstance():DoorLockDetailFragment {
-        val fragment = DoorLockDetailFragment()
-        return fragment
-    }
+        fun newInstance(): DoorLockDetailFragment {
+            val fragment = DoorLockDetailFragment()
+            return fragment
+        }
     }
 
+    var remoteUnLockList = mutableListOf<UnLockRecoardBean>()
 
-    override fun setupFragmentComponent(appComponent:AppComponent) {
+    var remoteUnLockAdapter = UnLockRecordAdapter(remoteUnLockList)
+
+
+    override fun setupFragmentComponent(appComponent: AppComponent) {
         DaggerDoorLockDetailComponent //如找不到该类,请编译一下项目
                 .builder()
                 .appComponent(appComponent)
@@ -62,11 +70,67 @@ class DoorLockDetailFragment : BaseFragment<DoorLockDetailPresenter>() , DoorLoc
                 .inject(this)
     }
 
-    override fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):View{
+    override fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater.inflate(R.layout.fragment_door_lock_detail, container, false);
     }
 
-    override fun initData(savedInstanceState:Bundle?) {
+    override fun initData(savedInstanceState: Bundle?) {
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        remoteUnLockList.add(UnLockRecoardBean("哈哈哈", 1, 1, "aaa", 0))
+        rcyUnLockRecord.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rcyUnLockRecord.adapter = remoteUnLockAdapter
+
+        tvLiveVideo.setOnClickListener {
+            //实时视频
+            launchActivity(Intent(requireActivity(), VideoPlayerActivity::class.java))
+        }
+
+
+        tvUnlockAuthorize.setOnClickListener {
+            //开锁授权
+            launchActivity(Intent(requireActivity(), UnLockAuthorizeActivity::class.java))
+        }
+
+
+        tvRemoteUnlocking.setOnClickListener {
+            //远程开锁
+            launchActivity(Intent(requireActivity(), RemoteUnLockActivity::class.java))
+        }
+
+        tvPasswordManage.setOnClickListener {
+            //密码管理
+            launchActivity(Intent(requireActivity(), PassWordManageActivity::class.java))
+        }
+
+        tvAuthorizeManage.setOnClickListener {
+            //密码管理
+            launchActivity(Intent(requireActivity(), AuthorizeManageActivity::class.java))
+        }
+
+        tvDeviceGrouping.setOnClickListener {
+            //设备分组
+            launchActivity(Intent(requireActivity(), DeviceGroupActivity::class.java))
+        }
+
+        tvDoorLockSetting.setOnClickListener {
+            //门锁设置
+            launchActivity(Intent(requireActivity(), DoorLockSettingActivity::class.java))
+        }
+
+
+
+
+        tvHistoryVideo.setOnClickListener {
+            //历史视频
+            launchActivity(Intent(requireActivity(), HistoryVideoActivity::class.java))
+        }
+
 
     }
 
@@ -106,7 +170,7 @@ class DoorLockDetailFragment : BaseFragment<DoorLockDetailPresenter>() , DoorLoc
      *
      * @param data 当不需要参数时 {@code data} 可以为 {@code null}
      */
-    override fun setData(data:Any?) {
+    override fun setData(data: Any?) {
 
     }
 
@@ -118,11 +182,11 @@ class DoorLockDetailFragment : BaseFragment<DoorLockDetailPresenter>() , DoorLoc
 
     }
 
-    override fun showMessage(message:String) {
+    override fun showMessage(message: String) {
         ArmsUtils.snackbarText(message)
     }
 
-    override fun launchActivity(intent:Intent) {
+    override fun launchActivity(intent: Intent) {
         ArmsUtils.startActivity(intent)
     }
 

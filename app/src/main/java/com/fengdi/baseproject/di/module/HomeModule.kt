@@ -12,18 +12,17 @@ import com.fengdi.baseproject.mvp.contract.home.HomeContract
 import com.fengdi.baseproject.mvp.model.home.HomeModel
 import com.fengdi.baseproject.mvp.ui.adapter.MonitorAdapter
 import com.fengdi.baseproject.mvp.ui.adapter.SmartLockAdapter
+import com.jess.arms.di.scope.NoSington
+import javax.inject.Singleton
 
 
 /**
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/07/2020 16:27
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/07/2020 16:27
+ 
+
  * ================================================
  */
 @Module
@@ -41,7 +40,7 @@ class HomeModule(private val view: HomeContract.View) {
         return model
     }
 
-    @FragmentScope
+    @NoSington
     @Provides
     fun provideLinearLayoutManager(): LinearLayoutManager {
         return LinearLayoutManager(view.requireActivity(), LinearLayoutManager.VERTICAL, false)
@@ -49,13 +48,13 @@ class HomeModule(private val view: HomeContract.View) {
 
     @FragmentScope
     @Provides
-    fun provideMonitorListOf(): MutableList<MonitorBean> {
+    fun provideMonitorListList(): MutableList<MonitorBean> {
         return mutableListOf()
     }
 
     @FragmentScope
     @Provides
-    fun provideSmartLockListOf(): MutableList<SmartLockBean> {
+    fun provideSmartLockList(): MutableList<SmartLockBean> {
         return mutableListOf()
     }
 

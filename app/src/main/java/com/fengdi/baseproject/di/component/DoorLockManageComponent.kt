@@ -13,12 +13,9 @@ import com.fengdi.baseproject.mvp.ui.activity.home.DoorLockManageActivity
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/09/2020 17:19
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/09/2020 17:19
+ 
+
  * ================================================
  */
 @ActivityScope

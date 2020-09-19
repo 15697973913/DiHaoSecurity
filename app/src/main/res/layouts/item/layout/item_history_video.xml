@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_line_f3f3f3"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_90"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_home_banner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="00'30"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="21:22:12"
+            app:drawableStartCompat="@drawable/ic_clock"
+            app:layout_constraintEnd_toEndOf="@+id/ivImage"
+            app:layout_constraintStart_toStartOf="@+id/ivImage"
+            app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

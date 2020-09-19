@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightTextColor="@color/mains_textcolor"
+        app:title="密码管理" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_175"
+        android:layout_margin="@dimen/dp_15"
+        android:background="@drawable/bg_radius8_gradient_blue">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_smartlock_white"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/JgTextView_ViceColor"
+            android:text="客厅大门锁"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:text="设备ID：34514786754"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            android:layout_marginTop="@dimen/dp_2"
+            android:textSize="@dimen/sp_12"/>
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:text="未设置密码"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/dp_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_height="@dimen/dp_30"
+            android:gravity="center"
+            android:layout_width="@dimen/dp_80"
+            android:text="立即设置"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_20"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/bg_radius20_white_line"
+            android:textSize="@dimen/sp_15"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

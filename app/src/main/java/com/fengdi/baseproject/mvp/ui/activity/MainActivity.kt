@@ -29,12 +29,9 @@ import javax.inject.Inject
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/05/2020 17:57
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/05/2020 17:57
+
+
  * ================================================
  */
 /**
@@ -134,6 +131,6 @@ class MainActivity : BaseActivity<MainPresenter>(), MainContract.View, BottomNav
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        TODO("Not yet implemented")
+        return true
     }
 }

@@ -17,4 +17,5 @@
     <color name="c_cccccc">#cccccc</color>
     <color name="c_666666">#666666</color>
     <color name="bg_dividing">#EEEDED</color>
+    <color name="bg_layout_default">#f5f6f7</color>
 </resources>

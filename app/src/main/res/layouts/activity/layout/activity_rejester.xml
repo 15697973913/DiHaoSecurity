@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:title="用户注册" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_topr20_card"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_40"
+        android:paddingRight="@dimen/dp_40">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/bg_radius30_f1f4f8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@mipmap/ic_login_phone"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/str_please_input_phone"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_7a88a0"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/bg_radius30_f1f4f8"
+                android:orientation="horizontal">
+
+                <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+                    android:id="@+id/etSmsCode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@mipmap/ic_login_sms_code"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_hint_input_smscode"
+                    android:imeActionLabel="@string/login_lab_login"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_7a88a0"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/getSmsCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:text="@string/str_get_smscode"
+                    android:textColor="@color/c_333333"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/bg_radius30_f1f4f8"
+                android:orientation="horizontal">
+
+
+                <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@mipmap/ic_login_sms_code"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_hint_input_pwd1"
+                    android:imeActionLabel="@string/login_lab_login"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_7a88a0"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/bg_radius30_f1f4f8"
+                android:orientation="horizontal">
+
+
+                <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+                    android:id="@+id/etRePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@mipmap/ic_login_sms_code"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_hint_reinput_pwd"
+                    android:imeActionLabel="@string/login_lab_login"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="@color/c_7a88a0"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lv_input_checkNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginTop="@dimen/dp_14"
+                android:background="@drawable/bg_radius50_gray"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+                    android:id="@+id/et_checkNumebr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/login_hint_input_sms_number"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:singleLine="true"
+                    android:textColor="@color/c_333333"
+                    android:textColorHint="#D7D7D7"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_send_number"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_marginEnd="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@drawable/bg_text_btn_line_red"
+                    android:bottom="@dimen/dp_5"
+                    android:gravity="center"
+                    android:left="@dimen/dp_13"
+                    android:right="@dimen/dp_13"
+                    android:text="@string/login_hint_get_sms_number"
+                    android:textColor="@color/text_color_reds1"
+                    android:textSize="@dimen/sp_10"
+                    android:top="@dimen/dp_5"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_15">
+
+
+            <TextView
+                android:id="@+id/tvForgetPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="@string/login_lab_forget_pwd"
+                android:textColor="@color/mains_textcolor"
+                android:textSize="@dimen/sp_13"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/cbRejectTreaty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我已阅读并同意《隐私政策》及《用户注册协议》"
+                android:textColor="@color/mains_textcolor"
+                android:textSize="@dimen/sp_12" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/bg_radius50_gradient_blue"
+            android:text="@string/login_lab_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+</LinearLayout>

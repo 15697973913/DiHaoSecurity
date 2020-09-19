@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightTextColor="@color/colorPrimary"
+        app:title="报警消息" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_15"
+            android:drawableRight="@mipmap/ic_arrow_down"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:text="2020年7月31日"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:text="显示全部" />
+
+    </LinearLayout>
+
+    <include layout="@layout/item_alert_message1"/>
+    <include layout="@layout/item_alert_message1"/>
+    <include layout="@layout/item_alert_message1"/>
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_radius6_white"
+    android:layout_marginTop="@dimen/dp_5"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginEnd="@dimen/dp_10"
+    android:layout_height="@dimen/dp_80"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/ivHead"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_15"
+        android:src="@mipmap/ic_default_head"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:qmui_corner_radius="@dimen/dp_25" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/JgTextView_MainColor"
+        android:text="好大一棵树"
+        app:layout_constraintTop_toTopOf="@id/ivHead"
+        app:layout_constraintStart_toEndOf="@+id/ivHead"
+        android:layout_marginStart="@dimen/dp_10"
+        android:textSize="@dimen/sp_15"/>
+
+    <TextView
+        android:layout_height="@dimen/dp_20"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:text="儿子"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@+id/ivHead"
+        android:background="@drawable/bg_radius10_ff72a4"
+        android:paddingStart="@dimen/dp_8"
+        android:paddingEnd="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2个智能设备"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="@dimen/dp_5"
+        app:drawableRightCompat="@drawable/ic_arrow_right_small" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

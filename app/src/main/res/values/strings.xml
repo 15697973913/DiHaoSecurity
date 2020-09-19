@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">帝豪安防</string>
     <string name="login_hint_input_pwd">请输入密码</string>
+    <string name="login_hint_input_pwd1">请输入密码(6–11位数字字母组合)</string>
     <string name="login_lab_login">登录</string>
     <string name="login_hint_input_sms_number">请输入验证码</string>
     <string name="login_hint_get_sms_number">获取验证码</string>

@@ -27,6 +27,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".mvp.ui.activity.GeneratePassWordActivity" />
+        <activity android:name=".mvp.ui.activity.mine.AddMemberActivity" />
+        <activity android:name=".mvp.ui.activity.mine.SelectMemberActivity" />
+        <activity android:name=".mvp.ui.activity.mine.AddGroupActivity" />
+        <activity android:name=".mvp.ui.activity.home.AlertMessageActivity" />
+        <activity android:name=".mvp.ui.activity.mine.ServiceCenterActivity" />
+        <activity android:name=".mvp.ui.activity.mine.MyGroupActivity" />
+        <activity android:name=".mvp.ui.activity.home.HistoryVideoActivity" />
+        <activity android:name=".mvp.ui.activity.home.DoorLockSettingActivity" />
+        <activity android:name=".mvp.ui.activity.home.DeviceGroupActivity" />
+        <activity android:name=".mvp.ui.activity.home.AuthorizeManageActivity" />
+        <activity android:name=".mvp.ui.activity.home.PassWordManageActivity" />
+        <activity android:name=".mvp.ui.activity.home.RemoteUnLockActivity" />
+        <activity android:name=".mvp.ui.activity.home.UnLockAuthorizeActivity" />
+        <activity android:name=".mvp.ui.activity.home.AddDeviceActivity" />
+        <activity android:name=".mvp.ui.activity.message.MyVideoActivity" />
+        <activity android:name=".mvp.ui.activity.message.MyAlbumActivity" />
+        <activity android:name=".mvp.ui.activity.message.MaintenanceActivity" />
+        <activity android:name=".mvp.ui.activity.message.AlertManageActivity" />
+        <activity android:name=".mvp.ui.activity.message.UnLockMessageActivity" />
+        <activity android:name=".mvp.ui.activity.mine.MyDevicesActivity" />
+        <activity android:name=".mvp.ui.activity.mine.ModifyPassWordActivity" />
+        <activity android:name=".mvp.ui.activity.mine.AccountSecurityActivity" />
+        <activity android:name=".mvp.ui.activity.mine.DataStorageActivity" />
+        <activity android:name=".mvp.ui.activity.mine.MyDataActivity" />
+        <activity android:name=".mvp.ui.activity.mine.SettingActivity" />
+        <activity android:name=".mvp.ui.activity.login.RejesterActivity" />
         <activity android:name=".mvp.ui.activity.home.MonitorManageActivity" />
         <activity android:name=".mvp.ui.activity.home.DoorLockManageActivity" />
         <activity android:name=".mvp.ui.activity.home.VideoPlayerActivity" />
@@ -41,7 +68,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvp.ui.activity.TestActivity" />
-        <activity android:name=".mvp.ui.activity.LoginActivity" />
+        <activity android:name=".mvp.ui.activity.login.LoginActivity" />
         <activity android:name=".mvp.ui.activity.UserActivity" />
         <!--
  只要依赖 AutoSize 就必须填写设计图尺寸, 否则报错, 不想使用 AutoSize 就不要依赖 AutoSize

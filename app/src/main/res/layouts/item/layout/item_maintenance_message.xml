@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_radius6_white"
+        android:paddingBottom="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_15"
+            android:src="@drawable/ic_house"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHomeName"
+            style="@style/JgTextView_MainColor"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="好大一棵树"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/tvLockModel"
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="帝豪智能门锁T80"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="@+id/tvHomeName"
+            app:layout_constraintTop_toBottomOf="@+id/tvHomeName" />
+
+        <TextView
+            android:id="@+id/tvDeviceId"
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="设备ID：87676516546875"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintStart_toStartOf="@+id/tvLockModel"
+            app:layout_constraintTop_toBottomOf="@+id/tvLockModel" />
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:text="2020-08-10 2:20:31"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvHomeName" />
+
+        <TextView
+           android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_width="0dp"
+            android:text="你的设备维护保养日期将于2020年8月15日到期，请及时维护保养"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintStart_toStartOf="@+id/tvDeviceId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeviceId" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

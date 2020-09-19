@@ -2,9 +2,13 @@ package com.fengdi.baseproject.mvp.ui.holder
 
 import android.view.View
 import com.fengdi.baseproject.app.entity.SmartLockBean
+import com.fengdi.baseproject.mvp.ui.activity.home.RemoteUnLockActivity
+import com.fengdi.baseproject.mvp.ui.activity.home.UnLockAuthorizeActivity
+import com.jess.arms.base.BaseActivity
 import com.jess.arms.base.BaseHolder
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.http.imageloader.ImageLoader
+import com.jess.arms.integration.AppManager
 import com.jess.arms.utils.ArmsUtils
 import com.qmuiteam.qmui.util.QMUIDisplayHelper
 import kotlinx.android.synthetic.main.item_home_smart_lock.view.*
@@ -37,9 +41,21 @@ class SmartLockHolder(itemView: View) : BaseHolder<SmartLockBean>(itemView) {
 //                        .imageView(itemView.ivLockImage)
 //                        .build())
 
-        itemView.tvOnLine.isSelected = data.isOnLine == 1
+
+
+
         itemView.tvAuthorizedUnlock.isSelected = data.isOnLine == 1
+        itemView.tvAuthorizedUnlock.isEnabled=data.isOnLine == 1
         itemView.tvRemoteUnlock.isSelected = data.isOnLine == 1
+        itemView.tvRemoteUnlock.isEnabled=data.isOnLine == 1
+
+        itemView.tvAuthorizedUnlock.setOnClickListener {
+           AppManager.getAppManager().startActivity(UnLockAuthorizeActivity::class.java)
+        }
+
+        itemView.tvRemoteUnlock.setOnClickListener {
+            AppManager.getAppManager().startActivity(RemoteUnLockActivity::class.java)
+        }
 
         if (data.state == 1) {
             itemView.tvState.isSelected = true
@@ -51,8 +67,10 @@ class SmartLockHolder(itemView: View) : BaseHolder<SmartLockBean>(itemView) {
 
         if (data.isOnLine == 1) {
             itemView.tvOnLine.text = "在线"
+            itemView.tvOnLine.isSelected =true
         } else {
             itemView.tvOnLine.text = "离线"
+            itemView.tvOnLine.isSelected =false
         }
 
 

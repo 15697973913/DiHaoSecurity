@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightContent="添加"
+        app:rightTextColor="@color/colorPrimary"
+        app:title="@string/str_mygroup" />
+
+
+    <include layout="@layout/item_my_group" />
+
+    <include layout="@layout/item_my_group" />
+
+    <include layout="@layout/item_my_group" />
+
+    <include layout="@layout/item_my_group" />
+
+
+</LinearLayout>

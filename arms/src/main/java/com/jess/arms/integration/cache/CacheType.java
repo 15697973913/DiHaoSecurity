@@ -31,8 +31,8 @@ import com.jess.arms.integration.RepositoryManager;
  *
  * @see Cache.Factory#build(CacheType)
  * Created by JessYan on 25/09/2017 18:05
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
+
+
  * ================================================
  */
 public interface CacheType {

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightTextColor="@color/colorPrimary"
+        app:title="@string/str_data_storage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_radius8_gradient_yellow">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/bg_radius30_7d6749"
+            android:padding="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cloud"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="我的存储容量：共0GB"
+            android:textColor="@color/c_7D6749"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+        <TextView
+            style="@style/JgTextView_ViceColor"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:text="还没有购买云存储，请先购买"
+            android:textColor="@color/c_7D6749"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        style="@style/JgTextView_MainColor"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="@string/str_storage_service"
+        android:textSize="@dimen/sp_20" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lin1TCapacity"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_90"
+            android:layout_margin="@dimen/dp_15"
+            android:paddingStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_weight="1"
+            android:background="@drawable/bg_radius8_gradient_blue_line"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/JgTextView_ViceColor"
+                android:text="@string/str_1t_storage_service"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                style="@style/JgTextView_MainColor"
+                android:text="@string/value_1t_storage_service_price"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                android:id="@+id/tv1TOldPrice"
+                style="@style/JgTextView_ViceColor"
+                android:text="@string/value_1t_storage_service_oldprice"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin500GCapacity"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_90"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_15"
+            android:background="@drawable/bg_radius8_gradient_pink_line"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/JgTextView_ViceColor"
+                android:text="@string/str_500g_storage_service"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                style="@style/JgTextView_MainColor"
+                android:text="@string/value_500g_storage_service_price"
+                android:textSize="@dimen/sp_24" />
+
+            <TextView
+                android:id="@+id/tv500GOldPrice"
+                style="@style/JgTextView_ViceColor"
+                android:text="@string/value_500g_storage_service_oldprice"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#25000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius20_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:text="切换分组"
+                app:drawableRightCompat="@mipmap/ic_arrow_down" />
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/ivHead1"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_15"
+                android:src="@mipmap/ic_default_head"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:qmui_corner_radius="@dimen/dp_25" />
+
+            <TextView
+                android:id="@+id/tvName1"
+                style="@style/JgTextView_MainColor"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="好大一棵树"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toEndOf="@+id/ivHead1"
+                app:layout_constraintTop_toTopOf="@id/ivHead1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bg_radius10_ff72a4"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:text="儿子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toEndOf="@+id/ivHead1"
+                app:layout_constraintTop_toBottomOf="@id/tvName1" />
+
+            <ImageView
+                android:id="@+id/ivGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_checkbox_yes" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linGroup2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70">
+
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/ivHead2"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_15"
+                android:src="@mipmap/ic_default_head"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:qmui_corner_radius="@dimen/dp_25" />
+
+            <TextView
+                android:id="@+id/tvName2"
+                style="@style/JgTextView_MainColor"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="好大一棵树"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintStart_toEndOf="@+id/ivHead2"
+                app:layout_constraintTop_toTopOf="@id/ivHead2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/bg_radius10_ff72a4"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_8"
+                android:text="儿子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintStart_toEndOf="@+id/ivHead2"
+                app:layout_constraintTop_toBottomOf="@id/tvName2" />
+
+            <ImageView
+                android:id="@+id/ivGroup2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_checkbox_yes" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View style="@style/dividingLine_Horizontal" />
+
+
+        <LinearLayout
+            android:id="@+id/linManageGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="管理分组"
+                app:drawableStartCompat="@drawable/ic_manage" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vOther"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

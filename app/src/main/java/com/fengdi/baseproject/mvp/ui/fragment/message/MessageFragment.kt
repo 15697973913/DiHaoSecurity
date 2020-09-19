@@ -16,18 +16,17 @@ import com.fengdi.baseproject.mvp.contract.message.MessageContract
 import com.fengdi.baseproject.mvp.presenter.message.MessagePresenter
 
 import com.fengdi.baseproject.R
+import com.fengdi.baseproject.mvp.ui.activity.message.*
+import kotlinx.android.synthetic.main.fragment_message.*
 
 
 /**
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/07/2020 15:12
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/07/2020 15:12
+
+
  * ================================================
  */
 /**
@@ -66,7 +65,30 @@ class MessageFragment : BaseFragment<MessagePresenter>(), MessageContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
+        linUnLockManage.setOnClickListener {
+            //开锁消息
+            launchActivity(Intent(requireActivity(), UnLockMessageActivity::class.java))
+        }
 
+        linAlertManage.setOnClickListener {
+            //报警消息
+            launchActivity(Intent(requireActivity(), AlertManageActivity::class.java))
+        }
+
+        linMaintenance.setOnClickListener {
+//            维保消息
+            launchActivity(Intent(requireActivity(), MaintenanceActivity::class.java))
+        }
+
+        linMyAlbum.setOnClickListener {
+            //我的相册
+            launchActivity(Intent(requireActivity(), MyAlbumActivity::class.java))
+        }
+
+        linMyVideo.setOnClickListener {
+            //我的视频
+            launchActivity(Intent(requireActivity(), MyVideoActivity::class.java))
+        }
     }
 
     /**

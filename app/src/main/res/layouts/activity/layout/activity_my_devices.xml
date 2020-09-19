@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_layout_default"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.mine.MyDevicesActivity">
+
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:title="@string/str_mydevices" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recMyDevices"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_mydevices"
+
+        />
+
+</LinearLayout>

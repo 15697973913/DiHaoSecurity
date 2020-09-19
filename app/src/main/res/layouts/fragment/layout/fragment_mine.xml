@@ -18,6 +18,7 @@
         android:layout_height="wrap_content" />
 
     <ImageView
+        android:id="@+id/ivSetting"
         android:layout_width="@dimen/dp_24"
         android:layout_height="@dimen/dp_24"
         android:layout_marginTop="@dimen/dp_10"
@@ -83,6 +84,7 @@
                 android:src="@mipmap/ic_family_manage" />
 
             <TextView
+                android:id="@+id/tvFamilyManage"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_10"
@@ -100,6 +102,7 @@
         <View style="@style/dividingLine_Horizontal_Margin15" />
 
         <LinearLayout
+            android:id="@+id/linMyDevices"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_60"
             android:background="@color/white"
@@ -162,6 +165,7 @@
         <View style="@style/dividingLine_Horizontal_Margin15" />
 
         <LinearLayout
+            android:id="@+id/linDataStorage"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_60"
             android:background="@color/white"
@@ -193,6 +197,7 @@
         <View style="@style/dividingLine_Horizontal_Margin15" />
 
         <LinearLayout
+            android:id="@+id/linServiceCenter"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_60"
             android:background="@color/white"

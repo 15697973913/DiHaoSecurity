@@ -59,7 +59,7 @@
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp_20"
-        android:src="@mipmap/arms_logo"
+        android:src="@mipmap/ic_default_head"
         app:qmui_corner_radius="@dimen/dp_25" />
 
     <!--    qmui_general_shadow_elevation-->

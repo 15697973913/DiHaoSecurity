@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".mvp.ui.activity.mine.ModifyPassWordActivity">
+
+
+    <com.fengdi.baseproject.mvp.ui.widget.MyToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isNeedStatusbarPadding="true"
+        app:rightTextColor="@color/colorPrimary"
+        app:title="@string/str_modify_phone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@drawable/bg_radius30_f1f4f8"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+            android:id="@+id/etOldPassWord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_login_sms_code"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="请输入旧密码"
+            android:imeActionLabel="@string/login_lab_login"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:singleLine="true"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_7a88a0"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@drawable/bg_radius30_f1f4f8"
+        android:orientation="horizontal">
+
+        <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_login_sms_code"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="请输入新密码（6-11位数字字母组合）"
+            android:imeActionLabel="@string/login_lab_login"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:singleLine="true"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_7a88a0"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linSmsCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@drawable/bg_radius30_f1f4f8"
+        android:orientation="horizontal">
+
+        <com.fengdi.baseproject.mvp.ui.widget.ClearEditText
+            android:id="@+id/etRePassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_login_sms_code"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="再次输入新密码"
+            android:imeActionLabel="@string/login_lab_login"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:singleLine="true"
+            android:textColor="@color/c_333333"
+            android:textColorHint="@color/c_7a88a0"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:background="@drawable/bg_radius50_gradient_blue"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+
+</LinearLayout>

@@ -284,10 +284,10 @@
                 android:visibility="gone"
                 android:text="@string/login_lab_forget_pwd"
                 android:textColor="@color/mains_textcolor"
-                android:textSize="@dimen/sp_13" />
+                android:textSize="@dimen/sp_14" />
 
             <TextView
-                android:id="@+id/tv_phone_register"
+                android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -303,7 +303,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_44"
             android:layout_marginTop="@dimen/dp_20"
-            android:background="@drawable/bg_radius50_jianbian"
+            android:background="@drawable/bg_radius50_gradient_blue"
             android:text="@string/login_lab_login"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_16" />

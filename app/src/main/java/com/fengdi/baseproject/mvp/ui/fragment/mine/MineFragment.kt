@@ -10,21 +10,21 @@ import com.fengdi.baseproject.di.component.DaggerMineComponent
 import com.fengdi.baseproject.di.module.MineModule
 import com.fengdi.baseproject.mvp.contract.mine.MineContract
 import com.fengdi.baseproject.mvp.presenter.mine.MinePresenter
+import com.fengdi.baseproject.mvp.ui.activity.home.DeviceGroupActivity
+import com.fengdi.baseproject.mvp.ui.activity.mine.*
 import com.jess.arms.base.BaseFragment
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.utils.ArmsUtils
+import kotlinx.android.synthetic.main.fragment_mine.*
 
 
 /**
  * ================================================
  * Description:
  * <p>
- * Created by MVPArmsTemplate on 09/07/2020 10:30
- * <a href="mailto:jess.yan.effort@gmail.com">Contact me</a>
- * <a href="https://github.com/JessYanCoding">Follow me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms">Star me</a>
- * <a href="https://github.com/JessYanCoding/MVPArms/wiki">See me</a>
- * <a href="https://github.com/JessYanCoding/MVPArmsTemplate">模版请保持更新</a>
+ * Created by Yangjie on 09/07/2020 10:30
+
+
  * ================================================
  */
 /**
@@ -63,7 +63,28 @@ class MineFragment : BaseFragment<MinePresenter>(), MineContract.View {
     }
 
     override fun initData(savedInstanceState: Bundle?) {
+        //设置
+        ivSetting.setOnClickListener {
+            launchActivity(Intent(requireActivity(), SettingActivity::class.java))
+        }
 
+        //我的设备
+        linMyDevices.setOnClickListener {
+            launchActivity(Intent(requireActivity(), MyDevicesActivity::class.java))
+        }
+
+        linDataStorage.setOnClickListener {
+            launchActivity(Intent(requireActivity(), DataStorageActivity::class.java))
+        }
+
+        tvFamilyManage.setOnClickListener {
+            launchActivity(Intent(requireActivity(), MyGroupActivity::class.java))
+        }
+
+        linServiceCenter.setOnClickListener {
+            //客服中心
+            launchActivity(Intent(requireActivity(), ServiceCenterActivity::class.java))
+        }
     }
 
     /**
@@ -88,11 +109,7 @@ class MineFragment : BaseFragment<MinePresenter>(), MineContract.View {
      *       }
      *   }
      *}
-     *
-     *
-     *
-     *
-     *
+
      * // call setData(Object):
      * val data = Message();
      * data.what = 0;
